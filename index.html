@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Yanuar Ginting</title>
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="light-mode"> 
+  <!-- Header -->
+  <header>
+    <div class="logo">imyanuarginting</div>
+    <nav>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <!-- Toggle Button -->
+    <div class="toggle-container">
+      <span class="light-icon" title="Light Mode">☀️</span>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle"/>
+        <span class="slider round"></span>
+      </label>
+      <span class="dark-icon" title="Dark Mode">🌙</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hello Everyone, I'm</h2>
+      <h1>Yanuar Ginting</h1>
+      <h3>Data Analyst & Machine Learning Engineer</h3>
+      <p>
+        I'm a bachelor's degree in computer science from University of Bhayangkara
+        Jakarta Raya. I have technical skills in data analysis as well as non-technical
+        skills, such as time management, critical thinking, and problem-solving. 
+        I also have a growth mindset, open to feedback, able to adapt to change, and able
+        to work in teams. In addition, I have good communication skills, especially in
+        public speaking, which help me to convey ideas clearly and effectively. 
+        My goal is to continuously grow professionally and make a significant positive
+        contribution to the company.
+      </p>
+      <!-- Buttons -->
+      <div class="hero-buttons">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yanuarginting@gmail.com" class="btn btn-primary" target="_blank">Contact Me</a>
+        <a href="https://drive.google.com/uc?id=16fu6eMXTCHcwvJKjbC9qbSa2Kg-hXPBk" class="btn btn-secondary" target="_blank">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- Ganti src sesuai foto Anda -->
+      <img src=".\images\yanuar.png" alt="Yanuar Ginting" />
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    <p>
+      <strong>University of Bhayangkara Jakarta Raya</strong>
+      <br>
+      Bachelor's degree, Computer Science
+      <br>
+      2020 – 2024
+      <br>
+      GPA 3.78/4.00
+    </p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>Sep 2023 – Oct 2024</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Google Developer Student Clubs University of Bhayangkara Jakarta Raya</h3>
+          <p>Head of Curriculum and Developers Machine Learning</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>Feb – Apr 2024</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Binar Academy</h3>
+          <p>Data Science Student of FGA Digitalent Kominfo x Binar</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>Feb – Jul 2023</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Bangkit Academy</h3>
+          <p>Machine Learning Path Student</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>Aug – Dec 2022</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Orbit Future Academy</h3>
+          <p>AI Mastery Program Student</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>Sep – Oct 2022</span>
+        </div>
+        <div class="timeline-content">
+          <h3>DQLab</h3>
+          <p>Data Analyst Student of FGA Digitalent Kominfo x DQLab</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <span>May – Jun 2022</span>
+        </div>
+        <div class="timeline-content">
+          <h3>DQLab</h3>
+          <p>Data Engineer Student of FGA Digitalent Kominfo x DQLab</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill Section -->
+  <section id="skill" class="skill-section">
+    <h2>Skill</h2>
+    <div class="skill-container">
+      <!-- Hard Skill -->
+      <div class="skill-box">
+        <div class="skill-icon">⚙️</div>
+        <h3>Hard Skill</h3>
+        <p>Python, PostgreSQL, Machine Learning, Deep Learning, Looker Studio, Microsoft Excel, Google Sheets</p>
+      </div>
+
+      <!-- Soft Skill -->
+      <div class="skill-box">
+        <div class="skill-icon">💡</div>
+        <h3>Soft Skill</h3>
+        <p>Time Management, Critical Thinking, Problem Solving, Growth Mindset, Project Management</p>
+      </div>
+
+      <!-- Language -->
+      <div class="skill-box">
+        <div class="skill-icon">💬</div>
+        <h3>Language</h3>
+        <p>English, Bahasa Indonesia (Native)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <h2>Portfolio</h2>
+    <div class="portfolio-container-1">
+      <!-- Portfolio Item 1 -->
+      <div class="portfolio-item">
+        <img src=".\thumbnails\recyclass.png" alt="Recyclass: Recycle Classification" />
+        <h3>Recyclass: Recycle Classification</h3>
+        <p>
+          Transfer learning utilizes the MobileNet model that has been pre-trained on a dataset of plastic waste types
+          resulting in an accuracy of 98% for training data and 98% for validation data. This technology is expected to help in
+          recognizing and classifying plastic waste types, as well as supporting a better waste management system, including
+          in sorting, recycling, and processing plastic waste. Thus, this effort can be an important step in reducing the
+          negative impact of plastic waste on the environment in Indonesia.
+        </p>
+        <li>
+          <a href="https://github.com/imyanuarginting/RecyclassV2" target="_blank">Github</a>
+        </li>
+      </div>
+      <!-- Portfolio Item 2 -->
+      <div class="portfolio-item">
+        <img src=".\thumbnails\bike_sharing_analysis.png" alt="Bike Sharing Analysis" />
+        <h3>Bike Sharing Analysis</h3>
+        <p>
+          Conducting analysis using bicycle sales dataset for the past 2 years by formulating several business questions that
+          can be used to evaluate the company in the future.
+        </p>
+        <li>
+          <a href="https://github.com/imyanuarginting/Bike-Sharing-Analysis" target="_blank">Github</a>
+        </li>
+        <li>
+          <a href="https://yanuargintingbikesharingdataset.streamlit.app/" target="_blank">Streamlit</a>
+        </li>
+      </div>
+    </div>
+
+    <div class="portfolio-container-2">
+      <!-- Portfolio Item 3 -->
+      <div class="portfolio-item">
+        <img src=".\thumbnails\sentiment_analysis_mytelkomsel_app.png" alt="Sentiment Analysis in MyTelkomsel App" />
+        <h3>Sentiment Analysis in MyTelkomsel App</h3>
+        <p>
+          Conducting sentiment analysis using the comment dataset for the MyTelkomsel application on the Google Play
+          Store using various deep learning algorithms including Reccurent Neural Network (RNN), Long Short Term Memory
+          (LSTM), and Gated Reccurent Unit (GRU). The results of the process and training can be seen through the following
+          link:
+        </p>
+        <li>
+          <a href="https://github.com/imyanuarginting/Sentiment-Analysis-in-MyTelkomsel-App" target="_blank">Github</a>
+        </li>
+      </div>
+      <!-- Portfolio Item 4 -->
+      <div class="portfolio-item">
+        <img src=".\thumbnails\home_credit_scorecard_model_classification.png" alt="Home Credit Scorecard Model Classification" />
+        <h3>Home Credit Scorecard Model Classification</h3>
+        <p>
+          Conducting prediction analysis using the home credit dataset for identifying characteristics 
+          of clients who face difficulties in repaying loans using various machine learning algorithms including 
+          Decision Tree, Random Forest, Logistic Regression, K-Nearest Neighbors, Naive Bayes, and 
+          Multi-Layer Perceptron (MLP).
+        </p>
+        <li>
+          <a href="https://github.com/imyanuarginting/Home-Credit-Scorecard-Model-Classification" target="_blank">Github</a>
+        </li>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Yanuar Ginting. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Tombol Back to Homepage -->
+   <button id="backToHome" title="Back to Homepage">🚀</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
