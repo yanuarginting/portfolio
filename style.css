@@ -409,3 +409,74 @@
     background-color: #545454;
   }
   
+/* Contoh breakpoint 768px */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toggle-container {
+    margin-left: auto; /* Letakkan toggle di kanan atas */
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 1rem;
+  }
+
+  /* Skills Section */
+  .skills-container {
+    grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+  }
+
+  /* Portfolio Section */
+  .portfolio-container {
+    grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+  }
+
+  /* Experience Section */
+  .experience-section {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Contoh breakpoint 480px (lebih kecil lagi) */
+@media (max-width: 480px) {
+  /* Perkecil font agar lebih pas di layar sempit */
+  body {
+    font-size: 0.9rem;
+  }
+
+  /* Perkecil padding hero */
+  .hero {
+    padding: 1rem;
+  }
+
+  /* Ubah ukuran font judul */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+}
