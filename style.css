@@ -366,7 +366,13 @@
   }
   
   .portfolio-item a {
+    color: inherit;
+    text-decoration: none;
     text-align: left;
+  }
+
+  .portfolio-item a:hover {
+    color: #737373;
   }
 
   /* Footer */
