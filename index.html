@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Yanuar Ginting</title>
-  <!-- Import CSS -->
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Yanuar Ginting</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Apply saved theme immediately, before first paint, to avoid a flash
+  // of the wrong theme when the page loads.
+  (function(){
+    try {
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+</script>
 </head>
-<body class="light-mode"> 
-  <!-- Header -->
-  <header>
-    <div class="logo">yanuarginting</div>
-    <nav>
-      <ul>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skill">Skill</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
-    </nav>
-    <!-- Toggle Button -->
-    <div class="toggle-container">
-      <span class="light-icon" title="Light Mode">☀️</span>
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle"/>
-        <span class="slider round"></span>
-      </label>
-      <span class="dark-icon" title="Dark Mode">🌙</span>
-    </div>
-  </header>
+<body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Hello Everyone, I'm</h2>
-      <h1>Yanuar Ginting</h1>
-      <h3>Data Analyst & Machine Learning Engineer</h3>
-      <p>
-        I hold a bachelor's degree in computer science from Bhayangkara Jakarta Raya University and have technical skills 
-        in data analysis. My strengths include time management, critical thinking, and problem-solving, along with a growth 
-        mindset and adaptability. I excel in communication, particularly public speaking, which helps me convey ideas 
-        effectively. My goal is to grow professionally and contribute significantly to the company.
-      </p>
-      <!-- Buttons -->
-      <div class="hero-buttons">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yanuarginting@gmail.com" class="btn btn-primary" target="_blank">Contact Me</a>
-        <a href="https://drive.google.com/uc?id=1reJELmTqxgWR1oGwwMN4OsGRzm4mWRDv" class="btn btn-secondary" target="_blank">Download CV</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <!-- Ganti src sesuai foto Anda -->
-      <img src=".\images\yanuar.png" alt="Yanuar Ginting" />
-    </div>
-  </section>
+<!-- Theme Toggle -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle light / dark mode"></button>
 
-  <!-- Education Section -->
-  <section id="education" class="education-section">
-    <h2>Education</h2>
+<!-- Header -->
+<header class="site-header">
+  <nav class="pill-nav" id="pillNav">
+    <span class="indicator" id="indicator"></span>
+    <a href="#home" class="nav-item active">Home</a>
+    <a href="#education" class="nav-item">Educations</a>
+    <a href="#experience" class="nav-item">Experiences</a>
+    <a href="#skill" class="nav-item">Skills</a>
+    <a href="#project" class="nav-item">Projects</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Hello Everyone, I'm</h2>
+    <h1>Yanuar Ginting</h1>
+    <h3>Data Annotator &amp; Data Analyst</h3>
     <p>
-      <strong>University of Bhayangkara Jakarta Raya</strong>
-      <br>
-      Bachelor's degree, Computer Science
-      <br>
-      2020 – 2024
-      <br>
-      GPA 3.78/4.00
+      I hold a bachelor's degree in computer science from Bhayangkara Jakarta Raya University and have technical skills
+      in data analysis. My strengths include time management, critical thinking, and problem-solving, along with a growth
+      mindset and adaptability. I excel in communication, particularly public speaking, which helps me convey ideas
+      effectively. My goal is to grow professionally and contribute significantly to the company.
     </p>
+    <!-- Buttons -->
+    <div class="hero-buttons">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yanuarginting@gmail.com" class="btn btn-primary" target="_blank">Contact Me</a>
+      <a href="https://drive.google.com/uc?id=1reJELmTqxgWR1oGwwMN4OsGRzm4mWRDv" class="btn btn-secondary" target="_blank">Download CV</a>
+    </div>
+  </div>
+</section>
 
+<!-- Education Section -->
+<section id="education" class="education-section">
+  <h2><span class="section-icon">🎓</span><span class="section-title-text">Educations</span></h2>
+  <p>
+    <strong>University of Bhayangkara Jakarta Raya</strong>
     <br>
-    
-    <p>
-      <strong>SMK Negeri 02 Cikarang Barat</strong>
-      <br>
-      Computer and Network Engineering
-      <br>
-      2016 – 2019
-    </p>
-  </section>
+    Bachelor's degree, Computer Science
+    <br>
+    2020 – 2024
+    <br>
+    GPA 3.78/4.00
+  </p>
 
-  <!-- Experience Section -->
-  <section id="experience" class="experience-section">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
+  <p>
+    <strong>SMK Negeri 02 Cikarang Barat</strong>
+    <br>
+    High School Diploma, Computer and Network Engineering
+    <br>
+    2016 – 2019
+  </p>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section">
+  <h2><span class="section-icon">💼</span><span class="section-title-text">Experiences</span></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Mar 2026 – Juni 2026</span>
         </div>
@@ -91,8 +91,10 @@
           <p>Data Annotator</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Jan 2025 – Feb 2026</span>
         </div>
@@ -101,8 +103,10 @@
           <p>Freelance Data Analyst</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Oct 2025 – Dec 2025</span>
         </div>
@@ -111,8 +115,10 @@
           <p>Data Analyst Intern</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Sep 2024 – May 2025</span>
         </div>
@@ -121,8 +127,10 @@
           <p>Data Scientist Trainee</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Sep 2023 – Oct 2024</span>
         </div>
@@ -131,8 +139,10 @@
           <p>Head of Curriculum and Developers Machine Learning</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Feb 2024 – Apr 2024</span>
         </div>
@@ -141,8 +151,10 @@
           <p>Data Scientist Trainee</p>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
+    <div class="timeline-item">
+      <div class="timeline-card">
         <div class="timeline-date">
           <span>Feb 2023 – Jul 2023</span>
         </div>
@@ -152,54 +164,91 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Skill Section -->
-  <section id="skill" class="skill-section">
-    <h2>Skill</h2>
-    <div class="skill-container">
-      <!-- Hard Skill -->
-      <div class="skill-box">
-        <div class="skill-icon">⚙️</div>
-        <h3>Hard Skill</h3>
-        <p>
-          Python, PostgreSQL, Data Analysis (Tableau, Power BI, Metabase, BigQuery, Streamlit), 
-          Machine Learning (Classification, Regression, Sentiment Analysis, Image Classification),
-          Deep Learning (TensorFlow, PyTorch), Web Scraping (Selenium), Microsoft Excel, Google Sheets
-        </p>
-      </div>
 
-      <!-- Soft Skill -->
-      <div class="skill-box">
-        <div class="skill-icon">💡</div>
-        <h3>Soft Skill</h3>
-        <p>Time Management, Critical Thinking, Problem Solving, Growth Mindset, Project Management</p>
-      </div>
-
-      <!-- Language -->
-      <div class="skill-box">
-        <div class="skill-icon">💬</div>
-        <h3>Language</h3>
-        <p>Indonesian (Native), English (Advanced)</p>
+<!-- Skill Section -->
+<section id="skill" class="skill-section">
+  <h2><span class="section-icon">🛠️</span><span class="section-title-text">Skills</span></h2>
+  <div class="skill-container">
+    <!-- Hard Skill -->
+    <div class="skill-box">
+      <div class="skill-icon">⚙️</div>
+      <h3>Hard Skills</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Metabase</span>
+        <span class="skill-tag">BigQuery</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">Classification</span>
+        <span class="skill-tag">Regression</span>
+        <span class="skill-tag">Sentiment Analysis</span>
+        <span class="skill-tag">Image Classification</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">Selenium</span>
+        <span class="skill-tag">Microsoft Excel</span>
+        <span class="skill-tag">Google Sheets</span>
       </div>
     </div>
-  </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio-section">
-    <h2>Portfolio</h2>
-    <div class="portfolio-container-1">
-      <!-- Portfolio Item 1 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\lidar_3d_point_cloud_segmentation.png" alt="LiDAR 3D Point Cloud Segmentation" />
+    <!-- Soft Skill -->
+    <div class="skill-box">
+      <div class="skill-icon">💡</div>
+      <h3>Soft Skills</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Time Management</span>
+        <span class="skill-tag">Critical Thinking</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Growth Mindset</span>
+        <span class="skill-tag">Project Management</span>
+      </div>
+    </div>
+
+    <!-- Language -->
+    <div class="skill-box">
+      <div class="skill-icon">💬</div>
+      <h3>Language</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Indonesian (Native)</span>
+        <span class="skill-tag">English (Advanced)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="project" class="portfolio-section">
+  <h2><span class="section-icon">🚀</span><span class="section-title-text">Projects</span></h2>
+  <div class="portfolio-container">
+
+    <!-- Portfolio Item 1 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/lidar_3d_point_cloud_segmentation_1.png" alt="LiDAR 3D Point Cloud Segmentation" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="./thumbnails/lidar_3d_point_cloud_segmentation_2.png" alt="LiDAR 3D Point Cloud Segmentation" onerror="this.remove()" />
+        <img src="./thumbnails/lidar_3d_point_cloud_segmentation_3.png" alt="LiDAR 3D Point Cloud Segmentation" onerror="this.remove()" />
+      </div>
+      <div class="portfolio-body">
         <h3>LiDAR 3D Point Cloud Segmentation</h3>
         <p>
           Performed 3D LiDAR point cloud segmentation in real-world highway and urban driving environments. The objects/elements annotated included road (pink), curb (yellow), sidewalk (light green), others (sky blue), ceiling (dark green), wall (purple), and other relevant classes according to the annotation guidelines.
         </p>
       </div>
-      <!-- Portfolio Item 2 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\lidar_3d_bounding_box_object_detection.png" alt="LiDAR 3D Bounding Box Object Detection" />
+    </div>
+
+    <!-- Portfolio Item 2 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/lidar_3d_bounding_box_object_detection_1.png" alt="LiDAR 3D Bounding Box Object Detection" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="./thumbnails/lidar_3d_bounding_box_object_detection_2.png" alt="LiDAR 3D Bounding Box Object Detection" onerror="this.remove()" />
+        <img src="./thumbnails/lidar_3d_bounding_box_object_detection_3.png" alt="LiDAR 3D Bounding Box Object Detection" onerror="this.remove()" />
+      </div>
+      <div class="portfolio-body">
         <h3>LiDAR 3D Bounding Box Object Detection</h3>
         <p>
           Performed 3D LiDAR bounding box object detection in parking lot environments. The objects/elements annotated included sedan (green), suv (purple), and other relevant classes according to the annotation guidelines.
@@ -207,25 +256,28 @@
       </div>
     </div>
 
-    <div class="portfolio-container-2">
-      <!-- Portfolio Item 1 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\dasbor_sektoral_pengadaan_barang_jasa_pemerintah.png" alt="Recyclass: Recycle Classification" />
-        <h3>Dasbor Sektoral Pengadaan Barang/Jasa Pemerintah</h3>
-        <p>
-
-        </p>
-        <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahUmum/DasborPengadaanBarangJasaPemerintahUmum" target="_blank">Tableau (Cara Pengadaan Umum)</a>
-        <br>
-        <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahPenyedia/DasborPengadaanBarangJasaPemerintahPenyedia" target="_blank">Tableau (Cara Pengadaan Penyedia)</a>
-        <br>
-        <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahSwakelola/DasborPengadaanBarangJasaPemerintahSwakelola" target="_blank">Tableau (Cara Pengadaan Swakelola)</a>
-        <br>
-        <a href="https://docs.google.com/presentation/d/1i08eQ2wEDxBwQitZ8KwPqRYusgdCy3KSPmfE6Wo4_sQ/edit?usp=drive_link" target="_blank">PPT</a>
+    <!-- Portfolio Item 3 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/dasbor_sektoral_pengadaan_barang_jasa_pemerintah.png" alt="Dasbor Sektoral Pengadaan Barang/Jasa Pemerintah" onerror="this.parentElement.classList.add('no-img')" />
       </div>
-      <!-- Portfolio Item 2 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\recyclass.png" alt="Recyclass: Recycle Classification" />
+      <div class="portfolio-body">
+        <h3>Dasbor Sektoral Pengadaan Barang/Jasa Pemerintah</h3>
+        <div class="portfolio-links">
+          <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahUmum/DasborPengadaanBarangJasaPemerintahUmum" target="_blank">Tableau (Cara Pengadaan Umum)</a>
+          <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahPenyedia/DasborPengadaanBarangJasaPemerintahPenyedia" target="_blank">Tableau (Cara Pengadaan Penyedia)</a>
+          <a href="https://public.tableau.com/app/profile/yanuarginting/viz/DasborSektoralPengadaanBarangJasaPemerintahSwakelola/DasborPengadaanBarangJasaPemerintahSwakelola" target="_blank">Tableau (Cara Pengadaan Swakelola)</a>
+          <a href="https://docs.google.com/presentation/d/1i08eQ2wEDxBwQitZ8KwPqRYusgdCy3KSPmfE6Wo4_sQ/edit?usp=drive_link" target="_blank">PPT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Item 4 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/recyclass.png" alt="Recyclass: Recycle Classification" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Recyclass: Recycle Classification</h3>
         <p>
           Transfer learning utilizes the MobileNet model that has been pre-trained on a dataset of plastic waste types
@@ -234,147 +286,172 @@
           in sorting, recycling, and processing plastic waste. Thus, this effort can be an important step in reducing the
           negative impact of plastic waste on the environment in Indonesia.
         </p>
-        <a href="https://github.com/yanuarginting/RecyclassV2" target="_blank">Github</a>
+        <div class="portfolio-links">
+          <a href="https://github.com/yanuarginting/RecyclassV2" target="_blank">Github</a>
+        </div>
       </div>
     </div>
 
-    <div class="portfolio-container-3">
-      <!-- Portfolio Item 3 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\bike_sharing_analysis.png" alt="Bike Sharing Analysis" />
+    <!-- Portfolio Item 5 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/bike_sharing_analysis.png" alt="Bike Sharing Analysis" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Bike Sharing Analysis</h3>
         <p>
           Conducting analysis using bicycle sales dataset for the past 2 years by formulating several business questions that
           can be used to evaluate the company in the future.
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Bike-Sharing-Analysis" target="_blank">Github</a>
-        </li>
-        <li>
           <a href="https://bike-sharing-analysis-by-yanuarginting.streamlit.app/" target="_blank">Streamlit</a>
-        </li>
+        </div>
       </div>
-      <!-- Portfolio Item 4 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\sentiment_analysis_mytelkomsel_app.png" alt="Sentiment Analysis in MyTelkomsel App" />
+    </div>
+
+    <!-- Portfolio Item 6 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/sentiment_analysis_mytelkomsel_app.png" alt="Sentiment Analysis in MyTelkomsel App" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Sentiment Analysis in MyTelkomsel App</h3>
         <p>
           Conducting sentiment analysis using the comment dataset for the MyTelkomsel application on the Google Play
           Store using various deep learning algorithms including Reccurent Neural Network (RNN), Long Short Term Memory
-          (LSTM), and Gated Reccurent Unit (GRU). The results of the process and training can be seen through the following
-          link:
+          (LSTM), and Gated Reccurent Unit (GRU).
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Sentiment-Analysis-in-MyTelkomsel-App" target="_blank">Github</a>
-        </li>
+        </div>
       </div>
     </div>
 
-    <div class="portfolio-container-4">
-      <!-- Portfolio Item 5 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\home_credit_scorecard_model_classification.png" alt="Home Credit Scorecard Model Classification" />
+    <!-- Portfolio Item 7 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/home_credit_scorecard_model_classification.png" alt="Home Credit Scorecard Model Classification" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Home Credit Scorecard Model Classification</h3>
         <p>
-          Conducting prediction analysis using the home credit dataset for identifying characteristics 
-          of clients who face difficulties in repaying loans using various machine learning algorithms including 
-          Decision Tree, Random Forest, Logistic Regression, K-Nearest Neighbors, Naive Bayes, and 
+          Conducting prediction analysis using the home credit dataset for identifying characteristics
+          of clients who face difficulties in repaying loans using various machine learning algorithms including
+          Decision Tree, Random Forest, Logistic Regression, K-Nearest Neighbors, Naive Bayes, and
           Multi-Layer Perceptron (MLP).
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Home-Credit-Scorecard-Model-Classification" target="_blank">Github</a>
-        </li>
-        <li>
           <a href="https://public.tableau.com/views/HomeCreditScorecard/HomeCreditScorecardDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Tableau</a>
-        </li>
-        <li>
           <a href="https://drive.google.com/file/d/1CklQmVOuqQdZlnzBdPWazs_TbM7g2jQa/view?usp=sharing" target="_blank">Power BI</a>
-        </li>
-      </div>   
-      <!-- Portfolio Item 6 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\portuguese_bank_marketing_classification.png" alt="Portuguese Bank Marketing Classification" />
-        <h3>Portuguese Bank Marketing Classification</h3>
-        <p>
-          Conducting prediction analysis using the bank marketing dataset 
-          for identifying characteristics of clients who subscribed to a term deposit using various machine learning algorithms including 
-          Decision Tree, Random Forest, K-Nearest Neighbors, Support Vector Machine, and Neural Network. 
-          The results of the process and training can be seen through the following link:
-        </p>
-        <li>
-          <a href="https://github.com/yanuarginting/Portuguese-Bank-Marketing-Classification" target="_blank">Github</a>
-        </li>
+        </div>
       </div>
     </div>
 
-    <div class="portfolio-container-5">
-      <!-- Portfolio Item 7 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\russian_car_plates_prices_prediction.png" alt="Russian Car Plates Prices Prediction" />
+    <!-- Portfolio Item 8 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/portuguese_bank_marketing_classification.png" alt="Portuguese Bank Marketing Classification" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
+        <h3>Portuguese Bank Marketing Classification</h3>
+        <p>
+          Conducting prediction analysis using the bank marketing dataset
+          for identifying characteristics of clients who subscribed to a term deposit using various machine learning algorithms including
+          Decision Tree, Random Forest, K-Nearest Neighbors, Support Vector Machine, and Neural Network.
+        </p>
+        <div class="portfolio-links">
+          <a href="https://github.com/yanuarginting/Portuguese-Bank-Marketing-Classification" target="_blank">Github</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Item 9 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/russian_car_plates_prices_prediction.png" alt="Russian Car Plates Prices Prediction" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Russian Car Plates Prices Prediction</h3>
         <p>
           Conducting regression prediction using the car prices dataset for predicting cars
-          based on the car plate and the date using various machine learning algorithms including Decision Tree, Random Forest, and Bagging. 
-          The results of the process and training can be seen through the following link:
+          based on the car plate and the date using various machine learning algorithms including Decision Tree, Random Forest, and Bagging.
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Russian-Car-Plates-Prices-Prediction" target="_blank">Github</a>
-        </li>
+        </div>
       </div>
-      <!-- Portfolio Item 8 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\student_dropout_analysis_and_prediction.png" alt="Student Dropout Analysis and Prediction" />
+    </div>
+
+    <!-- Portfolio Item 10 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/student_dropout_analysis_and_prediction.png" alt="Student Dropout Analysis and Prediction" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Student Dropout Analysis and Prediction</h3>
         <p>
-          Conducting dropout risk analysis by identifying key factors influencing student attrition using machine learning techniques. 
-          The project includes developing an interactive dashboard for real-time monitoring and, optionally, building predictive models using algorithms such as 
+          Conducting dropout risk analysis by identifying key factors influencing student attrition using machine learning techniques.
+          The project includes developing an interactive dashboard for real-time monitoring and, optionally, building predictive models using algorithms such as
           Logistic Regression, K-Nearest Neighbors (KNN), Linear Discriminant Analysis (LDA), Decision Tree, Random Forest, and AdaBoost to proactively detect students at high risk of dropping out.
-          The codes and the results can be seen through the following link:
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Student-Dropout-Analysis-and-Prediction" target="_blank">Github</a>
-        </li>
+        </div>
       </div>
     </div>
 
-    <div class="portfolio-container-6">
-      <!-- Portfolio Item 9 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\employee_attrition_analysis_and_prediction.png" alt="Employee Attrition Analysis and Prediction" />
+    <!-- Portfolio Item 11 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/employee_attrition_analysis_and_prediction.png" alt="Employee Attrition Analysis and Prediction" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
         <h3>Employee Attrition Analysis and Prediction</h3>
         <p>
-          Conducting employee attrition analysis using HR dataset to identify key factors influencing resignation decisions and predict potential attrition using various machine learning algorithms including 
+          Conducting employee attrition analysis using HR dataset to identify key factors influencing resignation decisions and predict potential attrition using various machine learning algorithms including
           Logistic Regression, K-Nearest Neighbors (KNN), and Linear Discriminant Analysis (LDA). The project also includes developing an interactive dashboard to support real-time monitoring and strategic HR interventions.
-          The results of the process and training can be seen through the following link:
         </p>
-        <li>
+        <div class="portfolio-links">
           <a href="https://github.com/yanuarginting/Employee-Attrition-Analysis-and-Prediction" target="_blank">Github</a>
-        </li>
-      </div>
-      <!-- Portfolio Item 10 -->
-      <div class="portfolio-item">
-        <img src=".\thumbnails\web_scraping.png" alt="Web Scraping" />
-        <h3>Web Scraping</h3>
-        <p>
-          Conducting web scraping on several social media and e-commerce platforms such as Facebook, Instagram, TikTok, YouTube, Shopee, and Tokopedia using several Python libraries such as Selenium and googleapiclient for further analysis. 
-          The codes and the results can be seen through the following link:
-        </p>
-        <li>
-          <a href="https://github.com/yanuarginting/Web-Scraping" target="_blank">Github</a>
-        </li>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Yanuar Ginting. All Rights Reserved.</p>
-  </footer>
+    <!-- Portfolio Item 12 -->
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="./thumbnails/web_scraping.png" alt="Web Scraping" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="portfolio-body">
+        <h3>Web Scraping</h3>
+        <p>
+          Conducting web scraping on several social media and e-commerce platforms such as Facebook, Instagram, TikTok, YouTube, Shopee, and Tokopedia using several Python libraries such as Selenium and googleapiclient for further analysis.
+        </p>
+        <div class="portfolio-links">
+          <a href="https://github.com/yanuarginting/Web-Scraping" target="_blank">Github</a>
+        </div>
+      </div>
+    </div>
 
-  <!-- Tombol Back to Homepage -->
-   <button id="backToHome" title="Back to Homepage">🚀</button>
+  </div>
+</section>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Yanuar Ginting. All Rights Reserved.</p>
+</footer>
+
+<!-- Back to Home Button -->
+<button id="backToHome" class="back-to-home" aria-label="Kembali ke Home">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
