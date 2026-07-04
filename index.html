@@ -7,12 +7,12 @@
 <link rel="stylesheet" href="style.css">
 <script>
   // Apply saved theme immediately, before first paint, to avoid a flash
-  // of the wrong theme when the page loads.
+  // of the wrong theme when the page loads. Light is the default theme.
   (function(){
     try {
       var saved = localStorage.getItem('portfolio-theme');
-      if (saved === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
     } catch (e) {}
   })();
@@ -61,7 +61,7 @@
   <p>
     <strong>University of Bhayangkara Jakarta Raya</strong>
     <br>
-    Bachelor's degree, Computer Science
+    <span>Bachelor's degree, Computer Science</span>
     <br>
     2020 – 2024
     <br>
@@ -71,7 +71,7 @@
   <p>
     <strong>SMK Negeri 02 Cikarang Barat</strong>
     <br>
-    High School Diploma, Computer and Network Engineering
+    <span>High School Diploma, Computer and Network Engineering</span>
     <br>
     2016 – 2019
   </p>

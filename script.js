@@ -5,29 +5,30 @@
   const moonIcon = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.5C18.7 15.2 17.2 15.6 15.6 15.6C10.5 15.6 6.4 11.5 6.4 6.4C6.4 4.8 6.8 3.3 7.5 2C4.2 3.4 2 6.7 2 10.5C2 15.7 6.3 20 11.5 20C15.3 20 18.6 17.8 20 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
 
   function applyTheme(theme){
-    if (theme === 'light'){
-      document.documentElement.setAttribute('data-theme', 'light');
-      themeToggleBtn.innerHTML = moonIcon;
+    if (theme === 'dark'){
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggleBtn.innerHTML = sunIcon;
     } else {
       document.documentElement.removeAttribute('data-theme');
-      themeToggleBtn.innerHTML = sunIcon;
+      themeToggleBtn.innerHTML = moonIcon;
     }
     try { localStorage.setItem('portfolio-theme', theme); } catch (e) {}
   }
 
   const savedTheme = (function(){
     try { return localStorage.getItem('portfolio-theme'); } catch (e) { return null; }
-  })() || 'dark';
+  })() || 'light';
 
   applyTheme(savedTheme);
 
   themeToggleBtn.addEventListener('click', () => {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    applyTheme(isLight ? 'dark' : 'light');
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    applyTheme(isDark ? 'light' : 'dark');
   });
 
   const nav = document.getElementById('pillNav');
   const indicator = document.getElementById('indicator');
+
   const items = Array.from(nav.querySelectorAll('.nav-item'));
 
   function moveIndicatorTo(el){
